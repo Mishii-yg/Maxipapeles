@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Formulario de Pago</title>
+  <link rel="icon" href="../IMG/Icono.png">
+<head>
+  
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+	  display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;   
+}
+
+    .form-container {
+      width: 345px;
+      padding: 16px;
+      background-color: white;
+      margin-top: 30px;
+      box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.2);
+    }
+
+    .form-container h2 {
+      text-align: center;
+    }
+
+    /* Estilos para los campos de entrada */
+    .input-container {
+      margin: 10px;
+    }
+
+    .input-container label {
+      display: block;
+      text-align: center;
+    }
+
+    .input-container input[type="email"],
+    .input-container input[type="text"] {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      box-sizing: border-box;
+      border: none;
+      height: 44px;
+      background-color: #e8e8e8;
+    }
+
+    .input-container.name-container input[type="text"] {
+      height: 90px;
+    }
+
+    .input-container input[type="email"]:focus,
+    .input-container input[type="text"]:focus {
+      background-color: #fff;
+      box-shadow: 0px 0px 5px 1px rgba(186, 0, 143, 0.3);
+    }
+
+    /* Estilos para el botón */
+    .form-container button {
+      background-color: #46315c;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    .form-container button:hover {
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+  <br>
+  <div class="form-container">
+      <div class="input-container">
+        <label for="name"><b> Nombre del titular de la tarjeta </b></label>
+        <input type="text" placeholder="Introduce tus nombres" name="name" required>
+      </div>
+
+      <div class="input-container">
+        <label for="cardNumber"><b> Numero de Tarjeta </b></label>
+        <input type="text" placeholder="Introduce el numero de la tarjeta " name="cardNumber" required>
+      </div>
+
+      <div class="input-container">
+        <label for="expiryDate"><b> Fecha de caducidad</b></label>
+        <input type="text" placeholder="MM/AA" name="expiryDate" required>
+      </div>
+
+      <div class="input-container">
+        <label for="cvc"><b> Codigo de seguridad </b></label>
+        <input type="text" placeholder="CVC" name="cvc" required>
+      </div>
+
+      <div class="input-container">
+        <label for="city"><b> Ciudad </b></label>
+        <input type="text" placeholder="Introduce tu ciudad" name="city" required>
+      </div>
+      <br>
+	    <br>
+
+	  <label for="country">País:</label>
+	  <select id="country" required>
+		  <option value="" disabled selected> Selecciona un país </option>
+		  <option value="USA"> Colombia </option>
+		  <option value="MEX"> México </option>
+		  <option value="Ecuador"> Ecuador </option>
+		  <option value="Argentina"> Argentina </option>
+		  <option value="Chile"> Chile </option>
+		  <option value="Peru"> Peru </option>
+	  </select>
+	  <br>
+	  <br>
+	  <br>
+
+    <button type="submit">Pagar</button>
+    </form>
+  </div>
+</body>
+</html>
